@@ -1,8 +1,10 @@
 package day3;
 
-public class Ex15_For6_GCD {
+public class Ex15_For6_GCD 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		/* 두 정수의 최대 공약수를 구하는 코드를 작성하세요. 
 		 * 공약수 : 두 정수의 약수 중 공통으로 있는 약수
 		 * 최대공약수 : 공약수중 가장 큰 수
@@ -30,11 +32,17 @@ public class Ex15_For6_GCD {
 		for(i = 1; i<=5; i++);
 		for(int j = 1; j<=5; j++); */
 		
-		int i;
-		int j;
-		int k;
-		
-		
+		int gcd = 0;
+		int a = 374;
+		int b = 232373;
+		for (int i = 1; i <= a; i++)
+		{
+			if (a%i==0 && b%i==0)
+			{
+				gcd = i;
+			}
+		}
+		System.out.println(gcd);
 	}
 
 }
