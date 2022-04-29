@@ -32,17 +32,21 @@ public class Ex15_For6_GCD
 		for(i = 1; i<=5; i++);
 		for(int j = 1; j<=5; j++); */
 		
-		int gcd = 0;
-		int a = 374;
-		int b = 232373;
-		for (int i = 1; i <= a; i++)
+		int gcd = 1;
+		int small = 374;
+		int big = 232373;
+		if (big%small==0) System.out.println(small);
+		else
 		{
-			if (a%i==0 && b%i==0)
+			for (int i = 1; i <= small; i++)
 			{
-				gcd = i;
+				if (small%i==0 && big%i==0)
+				{
+					gcd = i;
+				}
 			}
+			System.out.println(gcd);
 		}
-		System.out.println(gcd);
 	}
 
 }
