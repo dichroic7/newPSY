@@ -1,6 +1,6 @@
 package day6;
 
-public class Ex8_Array6_Divisor {
+public class Ex08_Array6_Divisor {
 
 	public static void main(String[] args) {
 		/* 정수 num의 약수를 배열에 저장한 후, 출력하는 코드를 작성하세요
