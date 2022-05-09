@@ -13,15 +13,40 @@ public class lotto_again {
 		// 필요한 변수는 lotto[], user[], 난수는 (int)math.random()*44+1
 		
 		//일단 랜덤한 번호 7개 출력 후 배열에 입력
-		int lotto[] = new int[7];
-		for(int i = 0; i < lotto.length; i++)
-		{
-			for(int j = 0; j < i; j++)
-				if(lotto[i] != lotto[j]) lotto[i] = (int)Math.random()*44+1;
-			System.out.print(lotto[i] + " ");
-		}
+//		int lotto[] = new int[7];
+//		for(int i = 0; i < lotto.length; i++)
+//		{
+//			for(int j = 0; j < i; j++)
+//				if(lotto[i] != lotto[j]) lotto[i] = (int)Math.random()*44+1;
+//			System.out.print(lotto[i] + " ");
+//		}
 		
  
 	}
-
+	
+	public static int[] randomArray(int min, int max, int n)
+	{
+		int arr[] = new int [n];
+		for(int count = 0; count < n; ) {
+			int r = (int)(Math.random()*(max-min+1) + min);
+			if(!contains(arr, count, r)) {
+				arr[count] = r;
+				count++;
+			}
+		}
+		return arr;
+	}
+	
+	public static boolean contains(int arr[], int n, int num) {
+		//배열이 잘못되거나 비교 갯수가 잘못되서 비교할 필요가 없는 경우
+		if(arr.length < n) {
+			n = arr.length;
+		}
+		for(int i = 0; i<n; i++) {
+			if(arr[i] == num) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
